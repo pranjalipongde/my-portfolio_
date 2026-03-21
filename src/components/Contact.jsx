@@ -245,13 +245,13 @@ export default function Contact() {
                   className="retro-btn filled flex items-center justify-center gap-2 w-full"
                 >
                   {sent ? (
-                    <>
+                    <div className="flex justify-center items-center gap-2">
                       <CheckCircle size={15} /> Sent! Opening Mail App...
-                    </>
+                    </div>
                   ) : (
-                    <>
+                    <div className="flex justify-center items-center gap-4">
                       <Send size={15} /> Send Message
-                    </>
+                    </div>
                   )}
                 </button>
 

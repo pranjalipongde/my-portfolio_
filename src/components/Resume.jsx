@@ -1,12 +1,12 @@
-import { motion } from 'framer-motion'
-import { Download, FileText } from 'lucide-react'
+import { motion } from "framer-motion";
+import { Download, FileText } from "lucide-react";
 
 const highlights = [
-  { label: '2+ Years', sub: 'Frontend Experience' },
-  { label: '40%', sub: 'Page Load Improvement' },
-  { label: '99', sub: 'Lighthouse Score' },
-  { label: '10+', sub: 'Projects Delivered' },
-]
+  { label: "2+ Years", sub: "Frontend Experience" },
+  { label: "40%", sub: "Page Load Improvement" },
+  { label: "99", sub: "Lighthouse Score" },
+  { label: "10+", sub: "Projects Delivered" },
+];
 
 export default function Resume() {
   return (
@@ -21,7 +21,9 @@ export default function Resume() {
         >
           <div className="os-titlebar">
             <span className="os-titlebar-text">C:\PRANJALI\resume.pdf</span>
-            <div className="os-close-btn" aria-hidden="true">✕</div>
+            <div className="os-close-btn" aria-hidden="true">
+              ✕
+            </div>
           </div>
 
           <div className="p-7 sm:p-10">
@@ -31,14 +33,15 @@ export default function Resume() {
                   style={{
                     fontFamily: '"Special Elite", serif',
                     fontSize: 28,
-                    color: '#4a5230',
+                    color: "#4a5230",
                     marginBottom: 8,
                   }}
                 >
                   Resume
                 </h2>
                 <p className="font-body text-sm text-charcoal/70 leading-relaxed max-w-xs">
-                  Frontend Developer · React Specialist · UI Builder<br />
+                  Frontend Developer · React Developer · UI Builder
+                  <br />
                   Available for full-time roles & freelance projects.
                 </p>
               </div>
@@ -49,19 +52,25 @@ export default function Resume() {
                   style={{
                     width: 70,
                     height: 80,
-                    background: '#f0ede3',
-                    border: '2px solid #2c2c2c',
+                    background: "#f0ede3",
+                    border: "2px solid #2c2c2c",
                     borderRadius: 6,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    boxShadow: '3px 3px 0px #6b7645',
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    boxShadow: "3px 3px 0px #6b7645",
                     gap: 4,
                   }}
                 >
                   <FileText size={28} color="#6b7645" />
-                  <span style={{ fontFamily: 'Share Tech Mono, monospace', fontSize: 9, color: '#4a5230' }}>
+                  <span
+                    style={{
+                      fontFamily: "Share Tech Mono, monospace",
+                      fontSize: 9,
+                      color: "#4a5230",
+                    }}
+                  >
                     .PDF
                   </span>
                 </div>
@@ -74,18 +83,18 @@ export default function Resume() {
                 <div
                   key={h.label}
                   style={{
-                    border: '2px solid #2c2c2c',
+                    border: "2px solid #2c2c2c",
                     borderRadius: 6,
-                    padding: '14px 10px',
-                    textAlign: 'center',
-                    background: 'rgba(107,118,69,0.05)',
+                    padding: "14px 10px",
+                    textAlign: "center",
+                    background: "rgba(107,118,69,0.05)",
                   }}
                 >
                   <div
                     style={{
                       fontFamily: '"Special Elite", serif',
                       fontSize: 26,
-                      color: '#4a5230',
+                      color: "#4a5230",
                       lineHeight: 1,
                     }}
                   >
@@ -100,38 +109,66 @@ export default function Resume() {
 
             {/* Experience timeline snippet */}
             <div className="mb-8">
-              <p className="font-mono text-xs text-olive uppercase tracking-widest mb-4">// Experience</p>
+              <p className="font-mono text-xs text-olive uppercase tracking-widest mb-4">
+                // Experience
+              </p>
               <div className="space-y-3">
                 {[
-                  { role: 'Frontend Developer', company: 'DigiCroz', period: 'Jan 2026 – Present', current: true },
-                  { role: 'Frontend Developer', company: 'PWM Group', period: 'May 2025 – Jul 2025', current: false },
-                  { role: 'Frontend Developer', company: 'Blue Infinity Tech LLP', period: 'May 2023 – Feb 2024', current: false },
-                  { role: 'ReactJS Intern', company: 'Syslog Infotech', period: 'Sep 2022 – Apr 2023', current: false },
+                  {
+                    role: "Frontend Developer",
+                    company: "DigiCroz",
+                    period: "Jan 2026 – Present",
+                    current: true,
+                  },
+                  {
+                    role: "Frontend Developer",
+                    company: "PWM Group",
+                    period: "May 2025 – Jul 2025",
+                    current: false,
+                  },
+                  {
+                    role: "Frontend Developer",
+                    company: "Blue Infinity Tech LLP",
+                    period: "May 2023 – Feb 2024",
+                    current: false,
+                  },
+                  {
+                    role: "ReactJS Intern",
+                    company: "Syslog Infotech",
+                    period: "Sep 2022 – Apr 2023",
+                    current: false,
+                  },
                 ].map((exp) => (
                   <div
                     key={exp.company}
                     style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
                       gap: 8,
                       paddingBottom: 10,
-                      borderBottom: '1px dashed #d8d4c4',
+                      borderBottom: "1px dashed #d8d4c4",
                     }}
                   >
                     <div>
-                      <span className="font-body text-sm font-semibold text-charcoal">{exp.role}</span>
-                      <span className="font-mono text-xs text-olive mx-2">@</span>
-                      <span className="font-body text-sm text-charcoal/70">{exp.company}</span>
+                      <span className="font-body text-sm font-semibold text-charcoal">
+                        {exp.role}
+                      </span>
+                      <span className="font-mono text-xs text-olive mx-2">
+                        @
+                      </span>
+                      <span className="font-body text-sm text-charcoal/70">
+                        {exp.company}
+                      </span>
                       {exp.current && (
                         <span
                           style={{
                             marginLeft: 8,
-                            background: '#6b7645',
-                            color: 'white',
-                            fontFamily: 'Share Tech Mono, monospace',
+                            background: "#6b7645",
+                            color: "white",
+                            fontFamily: "Share Tech Mono, monospace",
                             fontSize: 9,
-                            padding: '1px 6px',
+                            padding: "1px 6px",
                             borderRadius: 10,
                           }}
                         >
@@ -139,7 +176,9 @@ export default function Resume() {
                         </span>
                       )}
                     </div>
-                    <span className="font-mono text-[11px] text-charcoal/50 whitespace-nowrap">{exp.period}</span>
+                    <span className="font-mono text-[11px] text-charcoal/50 whitespace-nowrap">
+                      {exp.period}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -147,11 +186,6 @@ export default function Resume() {
 
             {/* Download button */}
             <div className="flex gap-4 flex-wrap">
-              {/* 
-                Replace href with the actual path to your resume PDF.
-                Put your resume PDF in the /public folder and update the href below.
-                Example: href="/Pranjali_Pongde_Resume.pdf"
-              */}
               <a
                 href="/Pranjali_Pongde_Resume.pdf"
                 download
@@ -162,7 +196,7 @@ export default function Resume() {
               </a>
               <a
                 href="mailto:pranjalipongde0997@gmail.com"
-                className="retro-btn flex items-center gap-2"
+                className="retro-btn flex items-center justify-center gap-2"
               >
                 Get In Touch
               </a>
@@ -171,5 +205,5 @@ export default function Resume() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

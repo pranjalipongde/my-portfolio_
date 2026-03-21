@@ -4,10 +4,10 @@ import profile from "../assets/profile.jpg";
 
 const roles = [
   "Frontend Developer",
-  "React.js Specialist",
+  "React.js Developer",
   "UI Builder",
-  "Content Creator",
   "Freelancer",
+  "Content Creator",
 ];
 
 export default function Hero() {
