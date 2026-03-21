@@ -83,6 +83,7 @@ const badgeColors = {
   "Live Product": "#0077b5",
   "Client Work": "#c8b89a",
   "Frontend Mentor Challenge": "#8a6a9a",
+  "Case Study Redesign": "#c87941",
   "In Progress 🚧": "#e87c7c",
 };
 
