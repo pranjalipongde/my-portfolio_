@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #f0ede3;
+  --grid-line: #d8d4c4;
+  --olive: #6b7645;
+  --olive-dark: #4a5230;
+  --charcoal: #2c2c2c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font-family: "Nunito", sans-serif;
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M0 0 L0 16 L4 12 L7 18 L9 17 L6 11 L11 11 Z' fill='%236b7645' stroke='white' stroke-width='1'/%3E%3C/svg%3E"),
+    auto;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cream);
+  border-left: 1px solid var(--grid-line);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--olive);
+  border-radius: 0;
+}
+
+/* Graph paper background */
+.graph-bg {
+  background-color: var(--cream);
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Window chrome */
+.os-window {
+  background: var(--cream);
+  border: 2px solid var(--charcoal);
+  border-radius: 8px;
+  box-shadow: 4px 4px 0px 0px var(--olive);
+  /* overflow: hidden; */
+}
+
+.os-titlebar {
+  background: var(--olive);
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--charcoal);
+}
+
+.os-titlebar-text {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 13px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.os-close-btn {
+  width: 16px;
+  height: 16px;
+  background: #e87c7c;
+  border: 1.5px solid var(--charcoal);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--charcoal);
+}
+
+/* Folder icon */
+.folder-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.folder-icon:hover {
+  transform: scale(1.08);
+}
+.folder-icon:active {
+  transform: scale(0.96) translateY(2px);
+}
+
+/* Retro button */
+.retro-btn {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 13px;
+  background: var(--cream);
+  border: 2px solid var(--charcoal);
+  padding: 8px 20px;
+  box-shadow: 3px 3px 0px var(--olive-dark);
+  cursor: pointer;
+  transition: all 0.1s ease;
+  text-decoration: none;
+  display: inline-block;
+  color: var(--charcoal);
+}
+.retro-btn:hover {
+  box-shadow: 1px 1px 0px var(--olive-dark);
+  transform: translate(2px, 2px);
+}
+.retro-btn.filled {
+  background: var(--olive);
+  color: white;
+  border-color: var(--olive-dark);
+  box-shadow: 3px 3px 0px var(--olive-dark);
+}
+.retro-btn.filled:hover {
+  box-shadow: 1px 1px 0px var(--olive-dark);
+  transform: translate(2px, 2px);
+}
+
+/* Pill tag */
+.tech-tag {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 11px;
+  background: transparent;
+  border: 1.5px solid var(--olive);
+  color: var(--olive-dark);
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+/* Social icon button (retro colored) */
+.social-icon-btn {
+  width: 52px;
+  height: 52px;
+  border: 2px solid var(--charcoal);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 0px var(--charcoal);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+.social-icon-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--charcoal);
+}
+
+/* Sticky sidebar nav */
+.sidebar-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 100;
+}
+
+/* Divider bar */
+.olive-bar {
+  background: var(--olive);
+  padding: 14px 0;
+  border-top: 2px solid var(--olive-dark);
+  border-bottom: 2px solid var(--olive-dark);
+}
+
+/* Tool icon grid */
+.tool-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.2s;
+  cursor: default;
+}
+.tool-icon:hover {
+  background: rgba(107, 118, 69, 0.1);
+}
+
+/* Typing cursor */
+.cursor-blink::after {
+  content: "|";
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Scroll animation utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
