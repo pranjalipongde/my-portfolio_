@@ -4,6 +4,15 @@ import { ExternalLink, Github, ChevronDown, ChevronUp } from "lucide-react";
 
 const projects = [
   {
+    title: "GrowthLab - Digital Marketing",
+    description:
+      "SEO-optimised digital marketing website offering services around growth, branding, and online presence. Achieved 90+ Lighthouse score with performance-first architecture and clean responsive design.",
+    tech: ["React.js", "Tailwind CSS", "SEO", "Performance Optimization"],
+    github: null,
+    live: "https://growth-page-pro.vercel.app/",
+    badge: "Live Product",
+  },
+  {
     title: "AI Resume Analyzer",
     description:
       "Portfolio-grade AI resume analyzer with real-time Gemini API integration. Showcases modern UX patterns with shadcn/ui components and clean TypeScript architecture.",
@@ -12,6 +21,16 @@ const projects = [
     live: null,
     badge: "In Progress 🚧",
   },
+  {
+    title: "Bright Future International School",
+    description:
+      "Researched and analyzed an existing school website with poor performance and outdated UI. Conducted a full case study and redesigned it from scratch with SEO and performance optimization as the core focus.",
+    tech: ["React.js", "Tailwind CSS", "SEO", "Performance Optimization"],
+    github: null,
+    live: "https://school-connect-lyart.vercel.app/",
+    badge: "Case Study Redesign",
+  },
+
   {
     title: "E-Commerce Platform",
     description:
@@ -48,7 +67,6 @@ const projects = [
     live: null,
     badge: "In Progress 🚧",
   },
-
   {
     title: "Hilink Travel Website",
     description:
