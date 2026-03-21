@@ -4,6 +4,15 @@ import { ExternalLink, Github, ChevronDown, ChevronUp } from "lucide-react";
 
 const projects = [
   {
+    title: "AI Resume Analyzer",
+    description:
+      "Portfolio-grade AI resume analyzer with real-time Gemini API integration. Showcases modern UX patterns with shadcn/ui components and clean TypeScript architecture.",
+    tech: ["React.js-router", "Vite", "Tailwind CSS", "Gemini API", "puter.js"],
+    github: "https://github.com/pranjalipongde/ai-resume-builder",
+    live: null,
+    badge: "In Progress 🚧",
+  },
+  {
     title: "E-Commerce Platform",
     description:
       "Full-featured e-commerce web app with authentication, product management, and CRUD operations. Built with optimized rendering and robust error handling for production reliability.",
@@ -39,15 +48,7 @@ const projects = [
     live: null,
     badge: "In Progress 🚧",
   },
-  {
-    title: "AI Resume Analyzer",
-    description:
-      "Portfolio-grade AI resume analyzer with real-time Gemini API integration. Showcases modern UX patterns with shadcn/ui components and clean TypeScript architecture.",
-    tech: ["React.js-router", "Vite", "Tailwind CSS", "Gemini API", "puter.js"],
-    github: "https://github.com/pranjalipongde/ai-resume-builder",
-    live: null,
-    badge: "In Progress 🚧",
-  },
+
   {
     title: "Hilink Travel Website",
     description:
