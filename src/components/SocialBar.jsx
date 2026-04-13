@@ -14,7 +14,7 @@ const socials = [
   },
   {
     label: "GitHub",
-    href: "https://github.com/pranjali-pongde",
+    href: "https://github.com/pranjalipongde",
     color: "#2c2c2c",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
