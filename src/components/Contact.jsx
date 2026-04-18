@@ -55,7 +55,7 @@ export default function Contact() {
     const body = encodeURIComponent(
       `Hi Pranjali,\n\n${form.message}\n\nFrom: ${form.name} (${form.email})`,
     );
-    window.location.href = `mailto:pranjalipongde0997@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:pranjalipongdee@gmail.com?subject=${subject}&body=${body}`;
     setSent(true);
     setTimeout(() => setSent(false), 4000);
   };
