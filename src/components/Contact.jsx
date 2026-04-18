@@ -12,8 +12,8 @@ import {
 const contactLinks = [
   {
     label: "Email",
-    value: "pranjalipongde0997@gmail.com",
-    href: "mailto:pranjalipongde0997@gmail.com",
+    value: "pranjalipongdee@gmail.com",
+    href: "mailto:pranjalipongdee@gmail.com",
     icon: Mail,
     color: "#e87c7c",
   },
