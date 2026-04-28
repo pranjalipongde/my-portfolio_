@@ -32,6 +32,16 @@ const projects = [
   },
 
   {
+    title: "Vastuscape",
+    description:
+      "Developed a responsive landing page for a home design and construction brand, focusing on modern design, clear content structure, and seamless user experience to support customer inquiries.",
+    tech: ["React.js", "Tailwind CSS", "SEO", "Performance Optimization"],
+    github: null,
+    live: "https://vastuscape-landingpage.vercel.app/",
+    badge: "Landing Page",
+  },
+
+  {
     title: "E-Commerce Platform",
     description:
       "Full-featured e-commerce web app with authentication, product management, and CRUD operations. Built with optimized rendering and robust error handling for production reliability.",
