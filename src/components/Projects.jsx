@@ -46,7 +46,7 @@ const projects = [
       "Developed and optimized the production website from scratch. Achieved 35% performance improvement with SEO-friendly, accessible markup and pixel-perfect cross-device consistency.",
     tech: ["Next.js", "Tailwind CSS", "SEO"],
     github: null,
-    live: "#",
+    live: "https://www.programmingwithmaurya.com/",
     badge: "Live Product",
   },
   {
