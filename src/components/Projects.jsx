@@ -4,12 +4,12 @@ import { ExternalLink, Github, ChevronDown, ChevronUp } from "lucide-react";
 
 const projects = [
   {
-    title: "GrowthLab - Digital Marketing",
+    title: "AI Writing Assistant",
     description:
-      "SEO-optimised digital marketing website offering services around growth, branding, and online presence. Achieved 90+ Lighthouse score with performance-first architecture and clean responsive design.",
-    tech: ["React.js", "Tailwind CSS", "SEO", "Performance Optimization"],
-    github: null,
-    live: "https://growth-page-pro.vercel.app/",
+      "A premium AI writing tool that helps users improve, rewrite, summarize, and transform their text instantly. Features include 8 transformation modes, custom instructions, action chaining, session history, and a Linear-inspired dark UI. Deployed on Vercel.",
+    tech: ["React.js", "Tailwind CSS", "Groq API", "shadcn/ui"],
+    github: "https://github.com/pranjalipongde/ai-writing-assistant",
+    live: "https://ai-writing-assistantt.vercel.app/",
     badge: "Live Product",
   },
   {
@@ -21,6 +21,25 @@ const projects = [
     live: null,
     badge: "In Progress 🚧",
   },
+  {
+    title: "PWM Group Website",
+    description:
+      "Developed and optimized the production website from scratch. Achieved 35% performance improvement with SEO-friendly, accessible markup and pixel-perfect cross-device consistency.",
+    tech: ["Next.js", "Tailwind CSS", "SEO"],
+    github: null,
+    live: "https://www.programmingwithmaurya.com/",
+    badge: "Live Product",
+  },
+  {
+    title: "GrowthLab - Digital Marketing",
+    description:
+      "SEO-optimised digital marketing website offering services around growth, branding, and online presence. Achieved 90+ Lighthouse score with performance-first architecture and clean responsive design.",
+    tech: ["React.js", "Tailwind CSS", "SEO", "Performance Optimization"],
+    github: null,
+    live: "https://growth-page-pro.vercel.app/",
+    badge: "Live Product",
+  },
+
   {
     title: "Bright Future International School",
     description:
@@ -49,15 +68,6 @@ const projects = [
     github: "https://github.com/pranjali-pongde",
     live: null,
     badge: "Personal Project",
-  },
-  {
-    title: "PWM Group Website",
-    description:
-      "Developed and optimized the production website from scratch. Achieved 35% performance improvement with SEO-friendly, accessible markup and pixel-perfect cross-device consistency.",
-    tech: ["Next.js", "Tailwind CSS", "SEO"],
-    github: null,
-    live: "https://www.programmingwithmaurya.com/",
-    badge: "Live Product",
   },
   {
     title: "Manage Landing Page",
