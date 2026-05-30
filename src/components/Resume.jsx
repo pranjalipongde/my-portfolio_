@@ -187,7 +187,7 @@ export default function Resume() {
             {/* Download button */}
             <div className="flex gap-4 flex-wrap">
               <a
-                href="/Pranjali_Pongde_Resume.pdf"
+                href="/Pranjali_Pongde_CV.pdf"
                 download
                 className="retro-btn filled flex items-center gap-2"
               >
