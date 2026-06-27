@@ -1,13 +1,14 @@
-import { useEffect } from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Projects from './components/Projects'
-import ContentCreator from './components/ContentCreator'
-import Resume from './components/Resume'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import SocialBar from './components/SocialBar'
+import { useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import ContentCreator from "./components/ContentCreator";
+import Resume from "./components/Resume";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import SocialBar from "./components/SocialBar";
+import Services from "./components/Services";
 
 function App() {
   // Scroll reveal
@@ -16,18 +17,18 @@ function App() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
+            entry.target.classList.add("visible");
           }
-        })
+        });
       },
-      { threshold: 0.1 }
-    )
+      { threshold: 0.1 },
+    );
 
-    const elements = document.querySelectorAll('.reveal')
-    elements.forEach((el) => observer.observe(el))
+    const elements = document.querySelectorAll(".reveal");
+    elements.forEach((el) => observer.observe(el));
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="graph-bg min-h-screen overflow-x-hidden">
@@ -36,6 +37,8 @@ function App() {
         <Hero />
         <SocialBar />
         <About />
+        <SocialBar />
+        <Services />
         <SocialBar />
         <Projects />
         <SocialBar />
@@ -47,7 +50,7 @@ function App() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

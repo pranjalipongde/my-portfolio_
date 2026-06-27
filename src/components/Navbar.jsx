@@ -71,6 +71,7 @@ export default function Navbar() {
     const sections = [
       "hero",
       "about",
+      "services",
       "projects",
       "content",
       "resume",
