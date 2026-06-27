@@ -4,9 +4,9 @@ import profile from "../assets/profile.jpg";
 
 const roles = [
   "Frontend Developer",
+  "Freelancer",
   "React.js Developer",
   "UI Builder",
-  "Freelancer",
   "Content Creator",
 ];
 
@@ -80,7 +80,7 @@ export default function Hero() {
 
         {/* Window content */}
         <div className="p-6 sm:p-10 flex flex-col sm:flex-row items-center sm:items-start gap-8">
-          {/* Avatar placeholder */}
+          {/* Profile Image */}
           <div className="flex-shrink-0 w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-olive">
             <img
               src={profile}
@@ -91,6 +91,66 @@ export default function Hero() {
 
           {/* Text content */}
           <div className="flex flex-col gap-3 text-center sm:text-left">
+            {/* 🟢 Open for Work Badge */}
+            <motion.div
+              className="flex justify-center sm:justify-start"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <div
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 7,
+                  background: "rgba(107,118,69,0.1)",
+                  border: "1.5px solid #6b7645",
+                  borderRadius: 20,
+                  padding: "4px 12px",
+                }}
+              >
+                {/* Pulsing green dot */}
+                <span
+                  style={{
+                    position: "relative",
+                    display: "flex",
+                    width: 10,
+                    height: 10,
+                  }}
+                >
+                  <span
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      borderRadius: "50%",
+                      background: "#7ecb96",
+                      opacity: 0.6,
+                      animation: "ping 1.5s cubic-bezier(0,0,0.2,1) infinite",
+                    }}
+                  />
+                  <span
+                    style={{
+                      width: 10,
+                      height: 10,
+                      borderRadius: "50%",
+                      background: "#7ecb96",
+                      display: "block",
+                    }}
+                  />
+                </span>
+                <span
+                  style={{
+                    fontFamily: "Share Tech Mono, monospace",
+                    fontSize: 11,
+                    color: "#4a5230",
+                    letterSpacing: 1,
+                  }}
+                >
+                  OPEN TO WORK · AVAILABLE FOR FREELANCE
+                </span>
+              </div>
+            </motion.div>
+
             <p className="font-mono text-olive text-sm tracking-wider uppercase">
               hi! i'm
             </p>
@@ -127,6 +187,13 @@ export default function Hero() {
           </div>
         </div>
       </motion.div>
+
+      {/* Ping animation */}
+      <style>{`
+        @keyframes ping {
+          75%, 100% { transform: scale(2); opacity: 0; }
+        }
+      `}</style>
     </section>
   );
 }
