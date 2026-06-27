@@ -7,6 +7,7 @@ import {
   Instagram,
   Send,
   CheckCircle,
+  Calendar,
 } from "lucide-react";
 
 const contactLinks = [
@@ -49,8 +50,6 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // This opens the default mail client with pre-filled content.
-    // For a real form, integrate with Formspree / EmailJS / Netlify Forms.
     const subject = encodeURIComponent(`Portfolio Inquiry from ${form.name}`);
     const body = encodeURIComponent(
       `Hi Pranjali,\n\n${form.message}\n\nFrom: ${form.name} (${form.email})`,
@@ -63,6 +62,102 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
+        {/* ── Book a Discovery Call CTA ── */}
+        <motion.div
+          className="os-window mb-6 reveal"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="os-titlebar">
+            <span className="os-titlebar-text">C:\PRANJALI\book_a_call</span>
+            <div className="os-close-btn" aria-hidden="true">
+              ✕
+            </div>
+          </div>
+          <div className="p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            {/* Left text */}
+            <div className="text-center sm:text-left">
+              <div className="flex items-center gap-2 justify-center sm:justify-start mb-2">
+                {/* Pulsing dot */}
+                <span
+                  style={{
+                    position: "relative",
+                    display: "flex",
+                    width: 10,
+                    height: 10,
+                  }}
+                >
+                  <span
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      borderRadius: "50%",
+                      background: "#7ecb96",
+                      opacity: 0.6,
+                      animation: "ping 1.5s cubic-bezier(0,0,0.2,1) infinite",
+                    }}
+                  />
+                  <span
+                    style={{
+                      width: 10,
+                      height: 10,
+                      borderRadius: "50%",
+                      background: "#7ecb96",
+                      display: "block",
+                    }}
+                  />
+                </span>
+                <span
+                  style={{
+                    fontFamily: "Share Tech Mono, monospace",
+                    fontSize: 11,
+                    color: "#6b7645",
+                    letterSpacing: 1,
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Currently Available
+                </span>
+              </div>
+              <h2
+                style={{
+                  fontFamily: '"Special Elite", serif',
+                  fontSize: 24,
+                  color: "#4a5230",
+                  marginBottom: 6,
+                }}
+              >
+                Let's Talk About Your Project
+              </h2>
+              <p className="font-body text-sm text-charcoal/65 leading-relaxed max-w-sm">
+                Have a project in mind? Book a free 30-minute discovery call —
+                no pressure, just a conversation about what you need and how I
+                can help.
+              </p>
+            </div>
+
+            {/* Right CTA */}
+            <div className="flex flex-col items-center gap-2 flex-shrink-0">
+              <a
+                href="https://calendly.com/pranjalipongde9/new-meeting"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="retro-btn filled flex items-center gap-2 whitespace-nowrap"
+                style={{ fontSize: 14 }}
+              >
+                <Calendar size={15} />
+                Book a Discovery Call
+              </a>
+              <span className="font-mono text-[10px] text-charcoal/40">
+                // Free · 30 min · No obligation
+              </span>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* ── Contact info + Form ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Left: Info window */}
           <motion.div
@@ -221,7 +316,7 @@ export default function Contact() {
                     value={form.message}
                     onChange={handleChange}
                     required
-                    rows={5}
+                    rows={4}
                     placeholder="Hi Pranjali, I'd love to..."
                     style={{
                       width: "100%",
@@ -249,7 +344,7 @@ export default function Contact() {
                       <CheckCircle size={15} /> Sent! Opening Mail App...
                     </div>
                   ) : (
-                    <div className="flex justify-center items-center gap-4">
+                    <div className="flex justify-center items-center gap-2">
                       <Send size={15} /> Send Message
                     </div>
                   )}
@@ -263,6 +358,13 @@ export default function Contact() {
           </motion.div>
         </div>
       </div>
+
+      {/* Ping animation */}
+      <style>{`
+        @keyframes ping {
+          75%, 100% { transform: scale(2); opacity: 0; }
+        }
+      `}</style>
     </section>
   );
 }
